@@ -16,24 +16,24 @@
 
 * 시퀀스 데이터를 다룰 수 있는 모델
   1. 조건부 확률 이용(베이즈 법칙)
-     * $P(X_1, ..., X_t) = P(X_t | X_1, ..., X_{t-1}) P(X_1, ..., X_{t-1})$
-     * $X_t \sim P(X_t | X_{t-1}, ..., X_1)$​
-     * $X_{t+1} \sim P(X_{t+1} | X_t, X_{t-1}, ..., X_1)$
-  2. $AR(\tau)$ (Autoregressive Model) : 자기회귀모델, 고정된 길이 $\tau$​​ 만큼의 시퀀스만 사용
-  3. 잠재 AR 모델 : 바로 이전 정보 $X_{t-1}$​​를 제외한 나머지 정보들 $X_{t-2}, ..., X_1$​​을 $H_t$​​​라는 잠재변수로 인코딩에서 활용하는 방법
+     * <!-- $P(X_1, ..., X_t) = P(X_t | X_1, ..., X_{t-1}) P(X_1, ..., X_{t-1})$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(X_1%2C%20...%2C%20X_t)%20%3D%20P(X_t%20%7C%20X_1%2C%20...%2C%20X_%7Bt-1%7D)%20P(X_1%2C%20...%2C%20X_%7Bt-1%7D)">
+     * <!-- $X_t \sim P(X_t | X_{t-1}, ..., X_1)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=X_t%20%5Csim%20P(X_t%20%7C%20X_%7Bt-1%7D%2C%20...%2C%20X_1)">​
+     * <!-- $X_{t+1} \sim P(X_{t+1} | X_t, X_{t-1}, ..., X_1)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=X_%7Bt%2B1%7D%20%5Csim%20P(X_%7Bt%2B1%7D%20%7C%20X_t%2C%20X_%7Bt-1%7D%2C%20...%2C%20X_1)">
+  2. <!-- $AR(\tau)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=AR(%5Ctau)"> (Autoregressive Model) : 자기회귀모델, 고정된 길이 <!-- $\tau$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctau">​​ 만큼의 시퀀스만 사용
+  3. 잠재 AR 모델 : 바로 이전 정보 <!-- $X_{t-1}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=X_%7Bt-1%7D">​​를 제외한 나머지 정보들 <!-- $X_{t-2}, ..., X_1$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=X_%7Bt-2%7D%2C%20...%2C%20X_1">​​ 을 <!-- $H_t$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=H_t">​​​라는 잠재변수로 인코딩에서 활용하는 방법
   4. RNN 모델 : 잠재변수 $H_t$​​를 신경망을 통해 반복해서 사용하여 시퀀스 데이터의 패턴을 학습하는 모델
-     * $X_t \sim P(X_t | X_{t-1}, H_t)$​, $H_t = Net_{\theta} (H_{t-1}, X_{t-1})$​
-     * $X_{t+1} \sim P(X_{t+1} | X_t, H_{t+1})$
+     * <!-- $X_t \sim P(X_t | X_{t-1}, H_t)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=X_t%20%5Csim%20P(X_t%20%7C%20X_%7Bt-1%7D%2C%20H_t)">​, <!-- $H_t = Net_{\theta} (H_{t-1}, X_{t-1})$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=H_t%20%3D%20Net_%7B%5Ctheta%7D%20(H_%7Bt-1%7D%2C%20X_%7Bt-1%7D)">​
+     * <!-- $X_{t+1} \sim P(X_{t+1} | X_t, H_{t+1})$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=X_%7Bt%2B1%7D%20%5Csim%20P(X_%7Bt%2B1%7D%20%7C%20X_t%2C%20H_%7Bt%2B1%7D)">
 
 * forward
   * MLP
-    * $H_t = \sigma (X_t W^{(1)} + b^{(1)})$
-    * $O_t = H_t W^{(2)} + b^{(2)}$
+    * <!-- $H_t = \sigma (X_t W^{(1)} + b^{(1)})$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=H_t%20%3D%20%5Csigma%20(X_t%20W%5E%7B(1)%7D%20%2B%20b%5E%7B(1)%7D)">
+    * <!-- $O_t = H_t W^{(2)} + b^{(2)}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=O_t%20%3D%20H_t%20W%5E%7B(2)%7D%20%2B%20b%5E%7B(2)%7D">
   * RNN : MLP와 유사한 모양이다.
-    * $H_t = \sigma (X_t W^{(1)}_X + H_{t-1} W^{(1)}_H + b^{(1)})$​ ($H_{t-1} W^{(1)}_H$​ term 추가)
-    * $O_t = H_t W^{(2)} + b^{(2)}$​
-    * $H_{t+1} = \sigma (X_{t+1} W^{(1)}_X + H_{t} W^{(1)}_H + b^{(1)})$​
-    * $O_{t+1} = H_{t+1} W^{(2)} + b^{(2)}$​
+    * <!-- $H_t = \sigma (X_t W^{(1)}_X + H_{t-1} W^{(1)}_H + b^{(1)})$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=H_t%20%3D%20%5Csigma%20(X_t%20W%5E%7B(1)%7D_X%20%2B%20H_%7Bt-1%7D%20W%5E%7B(1)%7D_H%20%2B%20b%5E%7B(1)%7D)">​ ( <!-- $H_{t-1} W^{(1)}_H$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=H_%7Bt-1%7D%20W%5E%7B(1)%7D_H">​ term 추가)
+    * <!-- $O_t = H_t W^{(2)} + b^{(2)}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=O_t%20%3D%20H_t%20W%5E%7B(2)%7D%20%2B%20b%5E%7B(2)%7D">​
+    * <!-- $H_{t+1} = \sigma (X_{t+1} W^{(1)}_X + H_{t} W^{(1)}_H + b^{(1)})$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=H_%7Bt%2B1%7D%20%3D%20%5Csigma%20(X_%7Bt%2B1%7D%20W%5E%7B(1)%7D_X%20%2B%20H_%7Bt%7D%20W%5E%7B(1)%7D_H%20%2B%20b%5E%7B(1)%7D)">​
+    * <!-- $O_{t+1} = H_{t+1} W^{(2)} + b^{(2)}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=O_%7Bt%2B1%7D%20%3D%20H_%7Bt%2B1%7D%20W%5E%7B(2)%7D%20%2B%20b%5E%7B(2)%7D">​
 
 * backward
   * BPTT(Backpropagation Through Time) : RNN의 역전파 방법
@@ -51,14 +51,14 @@
   * any, all, map, reversed 등 파이썬의 여러 기능을 사용할 수도 있다는 것을 깨달았다.
 
 * 강의 질문
-  * Q. 쿨백-라이블러 발산이 항상 0보다 크거나 같은 이유? 어떻게 $KL(P||Q) = \int_{X} P(x) \log (\frac{P(x)}{Q(x)}) dx$ 이 식이 항상 $KL(P||Q) \geq 0$ 을 만족할 수 있는 것인지 궁금
+  * Q. 쿨백-라이블러 발산이 항상 0보다 크거나 같은 이유? 어떻게 <!-- $KL(P||Q) = \int_{X} P(x) \log (\frac{P(x)}{Q(x)}) dx$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=KL(P%7C%7CQ)%20%3D%20%5Cint_%7BX%7D%20P(x)%20%5Clog%20(%5Cfrac%7BP(x)%7D%7BQ(x)%7D)%20dx"> 이 식이 항상 <!-- $KL(P||Q) \geq 0$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=KL(P%7C%7CQ)%20%5Cgeq%200"> 을 만족할 수 있는 것인지 궁금
   * 답변) https://hyunw.kim/blog/2017/10/27/KL_divergence.html
 
 ## 과제 수행 과정
 
 * 선택과제2
-  * $y$가 마지막 상태에서 1의 개수를 세는 건데, 결국 $s_n$ 이 1이면 1개이므로 $y$를 $s_n$로 loss를 계산해도 괜찮다.
-  * gradient 구할 때, $w_x$가 $s_1, ..., s_n$을 만드는데에 관여했으므로 각각에 체인룰을 적용하여 구한 gradient의 합을 구한다. $w_{rec}$​​ 도 마찬가지로 구한다.
+  * y가 마지막 상태에서 1의 개수를 세는 건데, 결국 <!-- $s_n$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=s_n"> 이 1이면 1개이므로 y를 <!-- $s_n$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=s_n">로 loss를 계산해도 괜찮다.
+  * gradient 구할 때, <!-- $w_x$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=w_x">가 <!-- $s_1, ..., s_n$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=s_1%2C%20...%2C%20s_n">을 만드는데에 관여했으므로 각각에 체인룰을 적용하여 구한 gradient의 합을 구한다. <!-- $w_{rec}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=w_%7Brec%7D">​​ 도 마찬가지로 구한다.
 
 * 선택과제3
   * 변수의 개수 n과 표본의 개수 n을 다르게 표기했어야 하는거 아닌가 싶긴 하다.

@@ -38,22 +38,22 @@
 * 확률변수 : 관측가능한 데이터, 함수로 해석
   * 확률변수 구분 : (데이터 공간이 아니라) 확률분포에 의해 결정
   * 이산확률변수(discrete) : 확률변수가 가질 수 있는 모든 경우의 수의 확률을 더해서 모델링
-    * 확률질량함수 : $P(X \in A) = \sum_{x \in A} P(X=x)$
+    * 확률질량함수 : <!-- $P(X \in A) = \sum_{x \in A} P(X=x)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(X%20%5Cin%20A)%20%3D%20%5Csum_%7Bx%20%5Cin%20A%7D%20P(X%3Dx)">
   * 연속확률변수(continuous) : 데이터 공간에 정의된 확률변수의 밀도(density) 위에서 적분을 통해 누적확률분포의 변화율을 모델링
-    * 밀도함수 :  $P(X \in A) = \int_A P(x) dx$
+    * 밀도함수 :  <!-- $P(X \in A) = \int_A P(x) dx$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(X%20%5Cin%20A)%20%3D%20%5Cint_A%20P(x)%20dx">
 
 * 확률분포 : 데이터를 표현하는 초상화, 기계학습을 통해 확률분포 추론
-  * 결합확률분포 $P(x,y)$
-    * 주어진 데이터의 결합분포 $P(x,y)$를 이용하여 원래 확률분포 $D$ 모델링
-  * 주변확률분포 $P(x)$ : 입력 $x$에 대한 정보
-    * $P(x) = \sum_y P(x, y)$ or $P(x) = \int_y P(x,y) dy$
-  * 조건확률분포 $P(x|y)$​ : 특정 클래스일 때의 데이터의 확률분포
-    * 데이터 공간에서 입력 $x$와 출력 $y$​ 사이의 관계 모델링
-  * 조건부확률 $P(y|x)$ : 입력변수 $x$​에 대해 정답이 $y$​​​일 확률(분류 문제)
+  * 결합확률분포 <!-- $P(x,y)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(x%2Cy)">
+    * 주어진 데이터의 결합분포 <!-- $P(x,y)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(x%2Cy)">를 이용하여 원래 확률분포 <!-- $D$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=D"> 모델링
+  * 주변확률분포 <!-- $P(x)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(x)"> : 입력 <!-- $x$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=x">에 대한 정보
+    * <!-- $P(x) = \sum_y P(x, y)$ or $P(x) = \int_y P(x,y) dy$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(x)%20%3D%20%5Csum_y%20P(x%2C%20y)%24%20or%20%24P(x)%20%3D%20%5Cint_y%20P(x%2Cy)%20dy">
+  * 조건확률분포 <!-- $P(x|y)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(x%7Cy)">​ : 특정 클래스일 때의 데이터의 확률분포
+    * 데이터 공간에서 입력 <!-- $x$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=x">와 출력 <!-- $y$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=y">​ 사이의 관계 모델링
+  * 조건부확률 <!-- $P(y|x)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=P(y%7Cx)"> : 입력변수 <!-- $x$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=x">​에 대해 정답이 <!-- $y$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=y">​​​일 확률(분류 문제)
     * 선형모델과 소프트맥스 함수의 결합 등 
-  * 조건부기대값 $E[y|x]$ : 입력변수 $x$에 대해 정답이 $y$​일 밀도(회귀 문제)
-    * $E_{y \sim P(y|x)}[y|x] = \int_y y P(y|x) dy$
-    * $E||y - f(x)||_2$ (L2-노름)을 최소화하는 함수 $f(x)$와 일치 (수학적으로 증명됌)
+  * 조건부기대값 <!-- $E[y|x]$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=E%5By%7Cx%5D"> : 입력변수 <!-- $x$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=x">에 대해 정답이 <!-- $y$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=y">​일 밀도(회귀 문제)
+    * <!-- $E_{y \sim P(y|x)}[y|x] = \int_y y P(y|x) dy$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=E_%7By%20%5Csim%20P(y%7Cx)%7D%5By%7Cx%5D%20%3D%20%5Cint_y%20y%20P(y%7Cx)%20dy">
+    * <!-- $E||y - f(x)||_2$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=E%7C%7Cy%20-%20f(x)%7C%7C_2"> (L2-노름)을 최소화하는 함수 <!-- $f(x)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=f(x)">와 일치 (수학적으로 증명됌)
 
 * 통계적 범함수(statistical functional) : 확률분포에서 데이터를 분석하는데 사용
   * 기대값(expectation) : 데이터를 대표하는 통계량, 평균(mean)
