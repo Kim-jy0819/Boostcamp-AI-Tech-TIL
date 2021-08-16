@@ -183,7 +183,7 @@
 
 * 과제 질문
   * Q. 선택과제 3번 무슨 그래프를 그리는게 맞을까요?
-    * "<!-- $N(x;μ=−1)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=N(x%3B%CE%BC%3D%E2%88%921)">이라는 확률분포에서 <!-- $x_0=1$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=x_0%3D1">이 나올 가능도(확률밀도)는 [빈칸] 이다."
+    * N(x ; mu=−1) 이라는 확률분포에서 <!-- $x_0=1$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=x_0%3D1">이 나올 가능도(확률밀도)는 [빈칸] 이다."
     * 그러니까 가능도가 결국 확률밀도인 것인가요? 결국 그려야 하는 그래프가 확률밀도함수 인가요?
     * 샘플이 하나여서 그런건지? (+) 그럼 로그도 안 씌워도 되는건지?
   * 답변) 확률밀도함수를 그리는 것을 통해서 모수 <!-- $\mu$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Cmu">​​​ 에 따른 가능도 차이를 보여주는 것 같아요. 로그를 취하는건 미분이 더 쉽기 때문임!
@@ -198,8 +198,8 @@
 
 * RNN Backpropagation(선택과제2)
   * **w_x에 대한 gradient값들을 더해주는 이유** : w_x가 s1...sn을 만드는데에 관여를 했고(계산그래프가 그려졌고), 이 때 **copy gate**를 통해서 여러 연산에 참여할 수 있었다고 보면, 계산 그래프의 역방향으로 들어온 gradient를 모두 합(sum)해주는게 맞는 것 같다.
-    ![image](https://user-images.githubusercontent.com/35680202/128513513-816494ea-a683-4f2e-b5f1-6b50612b2ee3.png)
-    ![image](https://user-images.githubusercontent.com/35680202/128593331-d174c719-12b1-49f2-ba60-309ae96b0631.png)
+    * <img src="https://user-images.githubusercontent.com/35680202/128513513-816494ea-a683-4f2e-b5f1-6b50612b2ee3.png" width="550" height="300">
+    * <img src="https://user-images.githubusercontent.com/35680202/128593331-d174c719-12b1-49f2-ba60-309ae96b0631.png" width="550" height="300">
 
 ## 학습 회고
 * 매일 학습 정리를 작성하니까 힘들지 않고 좋은 것 같다.

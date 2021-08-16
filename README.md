@@ -14,43 +14,43 @@
 
 ## Level 1 : Tutorials
 
-|  | Mon | Tue | Wed | Thu | Fri |  |
-|--|-----|-----|-----|-----|-----|--|
-| Week 1 : Python Basics & AI Math | [Day1](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0802-Level1-Day1.md) | [Day2](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0803-Level1-Day2.md) | [Day3](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0804-Level1-Day3.md) | [Day4](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0805-Level1-Day4.md) | [Day5](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0806-Level1-Day5.md) | [Wrap-up](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0807-Level1-%EB%B3%B4%EC%B6%A9%ED%95%99%EC%8A%B5.md) |
-| Week 2 : Deep Learning Basics | [Day6](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0809-Level1-Day6.md) | [Day7](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0810-Level1-Day7.md) | [Day8](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0811-Level1-Day8.md) | [Day9](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0812-Level1-Day9.md) | [Day10](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0813-Level1-Day10.md) | Wrap-up |
-| Week 3 : Pytorch Basics |-| Day11 | Day12 | Day13 | Day14 |-|
-| Week 4 : Image Classification | Day15 | Day16 | Day17 | Day18 | Day19 |-|
-| Week 5 : Image Classification | Day20 | Day21 | Day22 | Day23 | Day24 |-|
+|  | Mon | Tue | Wed | Thu | Fri |
+|--|-----|-----|-----|-----|-----|
+| Week 1 : Python Basics & AI Math | [Day1](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0802-Level1-Day1.md) | [Day2](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0803-Level1-Day2.md) | [Day3](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0804-Level1-Day3.md) | [Day4](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0805-Level1-Day4.md) | [Day5](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week1/0806-Level1-Day5.md) |
+| Week 2 : Deep Learning Basics | [Day6](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0809-Level1-Day6.md) | [Day7](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0810-Level1-Day7.md) | [Day8](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0811-Level1-Day8.md) | [Day9](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0812-Level1-Day9.md) | [Day10](https://github.com/hrxorxm/Boostcamp-AI-Tech-TIL/blob/main/Week2/0813-Level1-Day10.md) |
+| Week 3 : Pytorch Basics |-| Day11 | Day12 | Day13 | Day14 |
+| Week 4 : Image Classification | Day15 | Day16 | Day17 | Day18 | Day19 |
+| Week 5 : Image Classification | Day20 | Day21 | Day22 | Day23 | Day24 |
 
 
 ***
 
 ## Level 2 : AI Modeling Advanced
 
-|  | Mon | Tue | Wed | Thu | Fri |  |
-|--|-----|-----|-----|-----|-----|--|
-| Week 6 | | | | | | |
-| Week 7 | | | | | | |
-| Week 8 | | | | | | |
-| Week 9 | | | | | | |
-| Week 10 | | | | | | |
-| Week 11 | | | | | | |
-| Week 12 | | | | | | |
-| Week 13 | | | | | | |
-| Week 14 | | | | | | |
+|  | Mon | Tue | Wed | Thu | Fri |
+|--|-----|-----|-----|-----|-----|
+| Week 6 | | | | | |
+| Week 7 | | | | | |
+| Week 8 | | | | | |
+| Week 9 | | | | | |
+| Week 10 | | | | | |
+| Week 11 | | | | | |
+| Week 12 | | | | | |
+| Week 13 | | | | | |
+| Week 14 | | | | | |
 
 
 ***
 
 ## Level 3 : End to End
 
-|  | Mon | Tue | Wed | Thu | Fri |  |
-|--|-----|-----|-----|-----|-----|--|
-| Week 15 | | | | | | |
-| Week 16 | | | | | | |
-| Week 17 | | | | | | |
-| Week 18 | | | | | | |
-| Week 19 | | | | | | |
-| Week 20 | | | | | | |
-| Week 21 | | | | | | |
-| Week 22 | | | | | | |
+|  | Mon | Tue | Wed | Thu | Fri |
+|--|-----|-----|-----|-----|-----|
+| Week 15 | | | | | |
+| Week 16 | | | | | |
+| Week 17 | | | | | |
+| Week 18 | | | | | |
+| Week 19 | | | | | |
+| Week 20 | | | | | |
+| Week 21 | | | | | |
+| Week 22 | | | | | |

@@ -101,6 +101,11 @@
   * '*' 는 convolution 연산을 뜻하고, kernel을 움직이면서 더한다는 것을 수학적으로 표현한 것이다.
   * '+' / '-' 의 뜻 : 함수의 좌우 반전!
 
+* CNN Backpropagation : <!-- $\frac{\partial}{\partial x} [f*g](x) = \frac{\partial}{\partial x} \int_{R^d} f(y) g(x-y)dy = \int_{R^d} f(y) \frac{\partial g}{\partial x} (x-y)dy = [f*g'](x)$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%20x%7D%20%5Bf*g%5D(x)%20%3D%20%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%20x%7D%20%5Cint_%7BR%5Ed%7D%20f(y)%20g(x-y)dy%20%3D%20%5Cint_%7BR%5Ed%7D%20f(y)%20%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20x%7D%20(x-y)dy%20%3D%20%5Bf*g'%5D(x)">
+  * forward pass : <!-- $O_i = \sum_{j} w_j x_{i+j-1}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=O_i%20%3D%20%5Csum_%7Bj%7D%20w_j%20x_%7Bi%2Bj-1%7D">
+  * backward pass : <!-- $\frac{\partial L}{\partial W_i} = \sum_{j} \delta_j x_{i+j-1}, \frac{\partial L}{\partial x_i} = \sum_{j} \delta_j w_{i-j+1}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20W_i%7D%20%3D%20%5Csum_%7Bj%7D%20%5Cdelta_j%20x_%7Bi%2Bj-1%7D%2C%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x_i%7D%20%3D%20%5Csum_%7Bj%7D%20%5Cdelta_j%20w_%7Bi-j%2B1%7D">​​
+  * ![image](https://user-images.githubusercontent.com/35680202/128604387-2be5b830-65d3-4c86-bb14-07a2ff97477c.png)
+
 ## 피어세션이 피어씁니다.
 
 * 다른 조 좋은 피어 규칙

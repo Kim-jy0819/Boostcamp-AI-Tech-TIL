@@ -52,7 +52,9 @@
 
 * 강의 질문
   * Q. 쿨백-라이블러 발산이 항상 0보다 크거나 같은 이유? 어떻게 <!-- $KL(P||Q) = \int_{X} P(x) \log (\frac{P(x)}{Q(x)}) dx$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=KL(P%7C%7CQ)%20%3D%20%5Cint_%7BX%7D%20P(x)%20%5Clog%20(%5Cfrac%7BP(x)%7D%7BQ(x)%7D)%20dx"> 이 식이 항상 <!-- $KL(P||Q) \geq 0$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=KL(P%7C%7CQ)%20%5Cgeq%200"> 을 만족할 수 있는 것인지 궁금
-  * 답변) https://hyunw.kim/blog/2017/10/27/KL_divergence.html
+  * 답변) 증명 출처 : https://en.wikipedia.org/wiki/Gibbs%27_inequality#Proof
+    * ![image](https://user-images.githubusercontent.com/35680202/128598212-aae71591-9b5d-4d31-9435-27cf4a8d0756.png)
+    * **The information entropy of a distribution P** is less than or equal to **its cross entropy with any other distribution Q**.
 
 ## 과제 수행 과정
 
