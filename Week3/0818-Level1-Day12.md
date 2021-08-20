@@ -1,5 +1,16 @@
 # 부스트캠프 12일차
 
+- [부스트캠프 12일차](#부스트캠프-12일차)
+  - [오늘 일정 정리](#오늘-일정-정리)
+  - [강의 내용 정리](#강의-내용-정리)
+    - [[4강] AutoGrad & Optimizer](#4강-autograd--optimizer)
+    - [[5강] Dataset & Dataloader](#5강-dataset--dataloader)
+    - [[시각화 1강] Introduction to Visualization (OT)](#시각화-1강-introduction-to-visualization-ot)
+  - [과제 수행 과정](#과제-수행-과정)
+  - [피어 세션 정리](#피어-세션-정리)
+  - [특별 강의](#특별-강의)
+  - [학습 회고](#학습-회고)
+
 ## 오늘 일정 정리
 
 * 8/18 (수)
